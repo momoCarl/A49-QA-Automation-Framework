@@ -22,6 +22,7 @@ public class Homework16 extends BaseTest {
         driver.get(url);
 
         WebElement registration = driver.findElement(By.xpath("//a[contains(text(),'Registration / Forgot password')]"));
+
         Assert.assertTrue(registration.isDisplayed());
 
 
