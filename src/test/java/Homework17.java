@@ -26,7 +26,7 @@ addSongToMyPlaylist();
     private void addSongToMyPlaylist() {
         driver.findElement(By.xpath("//*[@id=\"songResultsWrapper\"]/div/div/div[1]/table/tr")).click();
         driver.findElement(By.xpath("//*[@id=\"songResultsWrapper\"]/header/div[3]/span/button[2]")).click();
-       driver.findElement(By.xpath("//*[@id=\"songResultsWrapper\"]/header/div[3]/div/section[1]/ul/li[5]")).click();
+        driver.findElement(By.xpath("//*[@id=\"songResultsWrapper\"]/header/div[3]/div/section[1]/ul/li[5]")).click();
         WebElement addSong = driver.findElement(By.xpath("/html/body/div[2]/div"));
         Assert.assertTrue(addSong.isDisplayed());
 
