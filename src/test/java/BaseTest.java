@@ -9,22 +9,21 @@ import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 
 public class BaseTest {
-  public WebDriver driver ;
+    public WebDriver driver;
 
     @BeforeSuite
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
     }
+
     @BeforeMethod
-    public void setBrowser(){
+    public void setBrowser() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
 
-         driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-
-
     }
 
 /*   @AfterMethod
