@@ -10,12 +10,18 @@ public class Homework18 extends BaseTest {
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
         playNextSong();
         clickPlaySong();
+        validateSongIsPlaying();
+    }
+
+    private void validateSongIsPlaying() {
+        WebElement pause = driver.findElement(By.cssSelector("[title='Pause']"));
+        Assert.assertTrue(pause.isDisplayed());
     }
 
     private void clickPlaySong() {
         driver.findElement(By.cssSelector("[title='Play or resume']")).click();
-        WebElement pause = driver.findElement(By.cssSelector("[title='Pause']"));
-        Assert.assertTrue(pause.isDisplayed());
+
+
     }
 
     private void playNextSong() {
