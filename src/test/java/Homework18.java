@@ -20,8 +20,6 @@ public class Homework18 extends BaseTest {
 
     private void clickPlaySong() {
         driver.findElement(By.cssSelector("[title='Play or resume']")).click();
-
-
     }
 
     private void playNextSong() {
