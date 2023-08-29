@@ -6,13 +6,11 @@ import org.testng.annotations.Test;
 public class Homework19 extends BaseTest {
     String url;
 
-    @Parameters({"BaseUrl"})
     @Test
-    public void deletePlaylist(String BaseUrl) {
-        url = BaseUrl;
-        driver.get(BaseUrl);
+    @Parameters({"BaseURL"})
+    public void deletePlaylist(String baseUrl) {
+        driver.get(baseUrl);
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
-
     }
 
     private void loginValideEmailPassowrd(String e, String p) {
@@ -21,10 +19,6 @@ public class Homework19 extends BaseTest {
         email.sendKeys(e);
         driver.findElement(By.cssSelector("[placeholder=\"Password\"] ")).sendKeys(p);
         driver.findElement(By.cssSelector("[type=submit]")).click();
-    }
-
-    private void openLoginUrl(String url) {
-        driver.get(url);
     }
 
 }
