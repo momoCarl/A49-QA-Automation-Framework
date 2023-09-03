@@ -31,8 +31,8 @@ public class Homework21 extends BaseTest {
         edit.sendKeys("diakite");
         edit.sendKeys(Keys.ENTER);
 
-        WebElement notificationDeleted = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div")));
-        Assert.assertTrue(notificationDeleted.isDisplayed());
+        WebElement notificationEdit= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div")));
+        Assert.assertTrue(notificationEdit.isDisplayed());
 
     }
 
