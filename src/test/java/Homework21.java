@@ -28,7 +28,6 @@ public class Homework21 extends BaseTest {
                 edit.sendKeys(Keys.BACK_SPACE);
             }
         }
-
         edit.sendKeys("diakite");
         edit.sendKeys(Keys.ENTER);
 
@@ -37,10 +36,10 @@ public class Homework21 extends BaseTest {
 
     }
 
-    private void findPlayList(String f) {
+  /*  private void findPlayList(String f) {
         clickOnElement(By.xpath(f));
 
-    }
+    }**/
 
     private void loginValideEmailPassowrd(String e, String p) {
         // WebElement email = driver.findElement(By.cssSelector("input[placeholder=\"Email Address\"]"));
