@@ -14,7 +14,6 @@ public class Homework21 extends BaseTest {
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
         // findPlayList("//a[text()=\"carlos\"]");
         rightClickEdit("//a[text()=\"carlos\"]");
-
     }
 
     private void rightClickEdit(String c) {
