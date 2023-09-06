@@ -14,10 +14,12 @@ public class BaseTest {
     public WebDriver driver;
     WebDriverWait wait;
     static Actions action = null;
+
     @BeforeSuite
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
     }
+
 
     @BeforeMethod
     public void setBrowser() {
@@ -28,7 +30,7 @@ public class BaseTest {
         // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        action= new Actions(driver);
+        action = new Actions(driver);
     }
 
 /*   @AfterMethod
