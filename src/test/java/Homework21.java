@@ -13,11 +13,11 @@ public class Homework21 extends BaseTest {
         driver.get(baseUrl);
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
         // findPlayList("//a[text()=\"carlos\"]");
-        rightClickEdit("//a[text()=\"carlos\"]");
+        rightClickEdit("carlos");
     }
 
-    private void rightClickEdit(String c) {
-        action.contextClick(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(c)))).perform();
+    public void rightClickEdit(String c) {
+        action.contextClick(wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(c)))).perform();
         clickOnElement(By.xpath("//li[text()='Edit']"));
         WebElement edit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));
 
@@ -30,15 +30,13 @@ public class Homework21 extends BaseTest {
         }
         edit.sendKeys("diakite");
         edit.sendKeys(Keys.ENTER);
-
-        WebElement notificationEdit= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div")));
+        WebElement notificationEdit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div")));
         Assert.assertTrue(notificationEdit.isDisplayed());
 
     }
 
   /*  private void findPlayList(String f) {
         clickOnElement(By.xpath(f));
-
     }**/
 
     private void loginValideEmailPassowrd(String e, String p) {
