@@ -45,7 +45,7 @@ public class Homework21 extends BaseTest {
         email.clear();
         email.sendKeys(e);
         // driver.findElement(By.cssSelector("[placeholder=\"Password\"] ")).sendKeys(p);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[placeholder=\"Password\"] "))).sendKeys(p);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[placeholder=\"Password\"]"))).sendKeys(p);
         // driver.findElement(By.cssSelector("[type=submit]")).click();
         clickOnElement(By.cssSelector("[type=submit]"));
     }

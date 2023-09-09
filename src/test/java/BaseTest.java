@@ -7,10 +7,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import pages.BasePage;
 
 import java.time.Duration;
 
 public class BaseTest {
+
+    public String url = "https://qa.koel.app/";
+
     public WebDriver driver;
     WebDriverWait wait;
     static Actions action = null;
@@ -31,6 +35,8 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
         action = new Actions(driver);
+        BasePage basepage = new BasePage(driver);
+        basepage.navigateToPage(url);
     }
 
 /*   @AfterMethod
