@@ -12,8 +12,8 @@ public class Homework19 extends BaseTest {
     public void deletePlaylist(String baseUrl) {
         driver.get(baseUrl);
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
-        clickPlayList();
-        clickDeletePlaylist();
+        //clickPlayList();
+        //clickDeletePlaylist();
     }
 
     private void clickDeletePlaylist() {
