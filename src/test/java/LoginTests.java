@@ -22,7 +22,6 @@ public class LoginTests extends BaseTest {
                 .setPassword("nnnnnn")
                 .clickLogin();
         loginPage.getRegistrationLink();
-
     }
 
     @Test
