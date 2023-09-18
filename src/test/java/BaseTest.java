@@ -14,7 +14,9 @@ import pages.BasePage;
 
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 
 public class BaseTest {
 
@@ -28,7 +30,23 @@ public class BaseTest {
     void setupClass() throws MalformedURLException {
         String browser = System.getProperty("browser");
         driver = setupBrowser(browser);
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
+        setupLambda();
+
+    }
+    WebDriver setupLambda() throws MalformedURLException {
+        String hubURL ="https://hub.lambdatest.com/wd/hub";
+        ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("117.0");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("username", "nataliafdc2015");
+        ltOptions.put("accessKey", "LFeuWpaO0SbfY6JhWiOWVBDCtEtuBPzu61PRsLcWpf2tss4AOL");
+        ltOptions.put("project", "TestPro");
+        ltOptions.put("w3c", true);
+        ltOptions.put("plugin", "java-testNG");
+        browserOptions.setCapability("LT:Options", ltOptions);
+        return  new RemoteWebDriver(new URL(hubURL),browserOptions);
     }
 
     public WebDriver setupBrowser(String browser) throws MalformedURLException {
@@ -52,9 +70,11 @@ public class BaseTest {
         basepage.navigateToPage(url);
     }
 
-/*   @AfterMethod
-   public void closeBrowser(){
+
+
+   /* @AfterMethod
+    public void closeBrowser() {
         driver.close();
-    }V**/
+    }**/
 
 }
