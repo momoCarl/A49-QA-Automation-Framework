@@ -2,11 +2,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Homework20 extends BaseTest {
+    WebDriverWait wait;
     @Parameters({"BaseURL"})
     @Test
     public void deletePlaylist(String baseUrl) {

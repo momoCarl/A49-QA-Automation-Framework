@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="HomeWork19">
+<suite name="HomeWork19" >
     <parameter name="BaseURL" value="https://qa.koel.app/"/>
     <test name="ExampleTest" preserve-order="false">
         <classes>

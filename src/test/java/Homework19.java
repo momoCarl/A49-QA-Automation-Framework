@@ -1,16 +1,19 @@
+import io.netty.util.Attribute;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Homework19 extends BaseTest {
-
+WebDriver driver;
     @Parameters({"BaseURL"})
     @Test
     public void deletePlaylist(String baseUrl) {
-        driver.get(baseUrl);
+
+        driver.get("https://qa.koel.app/");
         loginValideEmailPassowrd("momo.carlos5@gmail.com", "te$t$tudent");
         //clickPlayList();
         //clickDeletePlaylist();

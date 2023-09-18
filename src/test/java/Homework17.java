@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 class Homework17 extends BaseTest {
-
+WebDriver driver;
 
     @Test
     public void addSongToPlaylist() {
