@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -17,7 +18,7 @@ import java.time.Duration;
 public class BaseTest {
 
     private static final ThreadLocal<WebDriver> THREAD_LOCAL = new ThreadLocal<>();
-    public  WebDriver driver;
+    public WebDriver driver;
 
     public static WebDriver getThreadLocal() {
         return THREAD_LOCAL.get();
@@ -51,11 +52,14 @@ public class BaseTest {
         return new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
     }
 
+
     public WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         String gridURL = "http://10.2.127.17:4444";
 
         switch (browser) {
+
+
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions optionsFirefox = new FirefoxOptions();
@@ -78,7 +82,7 @@ public class BaseTest {
             default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions optionsChrome = new ChromeOptions();
-                optionsChrome.addArguments("--disable-notifications","--remote-allow-origins=*", "--incognito","--start-maximized");
+                optionsChrome.addArguments("--disable-notifications", "--remote-allow-origins=*", "--incognito", "--start-maximized");
                 optionsChrome.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 return driver = new ChromeDriver(optionsChrome);
         }

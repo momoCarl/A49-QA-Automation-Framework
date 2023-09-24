@@ -48,5 +48,7 @@ public class LoginTests extends BaseTest {
         HomePage homePage = new HomePage(getThreadLocal());
         loginPage.loginValidEmailPass();
 
+
+
     }
 }

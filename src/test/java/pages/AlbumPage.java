@@ -29,6 +29,7 @@ public class AlbumPage extends BasePage{
     }
     public AlbumPage clickAlbums(){
         wait.until(ExpectedConditions.elementToBeClickable(albums)).click();
+
         return this;
     }
 
