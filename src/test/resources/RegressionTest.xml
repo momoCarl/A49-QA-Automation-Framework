@@ -4,10 +4,11 @@
 <suite name="RegressionTest" parallel="methods" thread-count="1">
 
     <test name="Regression Test" preserve-order="false">
+        <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
-            <class name="Homework18">
+            <class name="HomeTest">
                 <methods>
-                    <include name="playSong"/>
+                    <include name="addSongToPlaylist"/>
                 </methods>
             </class>
 

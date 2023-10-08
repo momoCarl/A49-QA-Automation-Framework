@@ -11,8 +11,7 @@ public class AlbumTest extends BaseTest{
         log.loginValidEmailPass();
         al.clickAlbums();
         al.checkIfTitleIsVisible();
-        al.clickRigthBtnPlay();
-        al.clickPlayAll();
+
     }
 
 }

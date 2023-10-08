@@ -36,7 +36,7 @@ public class LoginTests extends BaseTest {
     @Test
     public static void loginWrongEmailTest() {
         LoginPage loginPage = new LoginPage(getThreadLocal());
-        loginPage.setEmail("demo@class.com")
+        loginPage.setEmail("demo@gmail.com")
                 .setPassword("te$t$tudent")
                 .clickLogin();
         loginPage.getRegistrationLink();
